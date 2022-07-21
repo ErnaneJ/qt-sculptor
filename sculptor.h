@@ -107,6 +107,11 @@
       * @param plan Representa plano que será visualizado;
       */
       std::vector<std::vector<Voxel>> readMx(int dimension = 0, int plan = XY);
+      //! Função membro clearAll.
+      /**
+      * retoma os dados do sculptor para o seu inicio.
+      */
+      void clearAll();
   };
 
 #endif // SCULPTOR_H

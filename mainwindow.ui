@@ -816,18 +816,6 @@
           </layout>
          </widget>
         </item>
-        <item>
-         <widget class="QGroupBox" name="groupBox_11">
-          <property name="title">
-           <string>File</string>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_13">
-           <item>
-            <widget class="QLineEdit" name="lineEditOFF"/>
-           </item>
-          </layout>
-         </widget>
-        </item>
        </layout>
       </item>
      </layout>
@@ -849,6 +837,8 @@
      <string>File</string>
     </property>
     <addaction name="actionCriar_arquivo_OFF"/>
+    <addaction name="actionClear_all"/>
+    <addaction name="actionOpen_conceptualization_file"/>
     <addaction name="actionQuit"/>
    </widget>
    <addaction name="menuArquivo"/>
@@ -867,6 +857,19 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionClear_all">
+   <property name="text">
+    <string>Clear all</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A, Del</string>
+   </property>
+  </action>
+  <action name="actionOpen_conceptualization_file">
+   <property name="text">
+    <string>Open conceptualization file</string>
    </property>
   </action>
  </widget>

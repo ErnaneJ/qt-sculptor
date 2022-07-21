@@ -63,6 +63,9 @@ private slots:
     void on_actionQuit_triggered();
     /// Cria o arquivo OFF quando o botão é engatilhado;
     void on_actionCriar_arquivo_OFF_triggered();
+    /// Limpa tudo já desenhado
+    void on_actionClear_all_triggered();
+    void on_actionOpen_conceptualization_file_triggered();
 
 private:
     Ui::MainWindow *ui;

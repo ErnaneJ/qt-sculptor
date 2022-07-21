@@ -19,6 +19,16 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz){
   }
 }
 
+void Sculptor::clearAll(){
+  for (int i = 0; i < nx; i++) {
+    for (int j = 0; j < ny; j++){
+      for (int k = 0; k < nz; k++){
+        cutVoxel(i, j, k);
+      }
+    }
+  }
+}
+
 Sculptor::~Sculptor(){
   for (int i = 0; i < nx; i++){
     for (int j = 0; j < ny; j++){
@@ -104,17 +114,17 @@ void Sculptor::writeOFF(std::string filename){
         current_voxel = &v[i][j][k];
         if(current_voxel -> isOn){
           output_file << 4 << " " << 0 + current_face << " " << 3 + current_face << " " << 2 + current_face << " " << 1 + current_face << " "
-               << current_voxel -> r << " " << current_voxel -> g << " " << current_voxel -> b << " " << current_voxel -> a << std::endl
+               << current_voxel -> r << " " << current_voxel -> g << " " << current_voxel -> b << " " << current_voxel -> a/1.0 << std::endl
                << 4 << " " << 4 + current_face << " " << 5 + current_face << " " << 6 + current_face << " " << 7 + current_face<< " "
-               << current_voxel -> r << " " << current_voxel -> g << " " << current_voxel -> b << " " << current_voxel -> a << std::endl
+               << current_voxel -> r << " " << current_voxel -> g << " " << current_voxel -> b << " " << current_voxel -> a/1.0 << std::endl
                << 4 << " " << 0 + current_face << " " << 1 + current_face << " " << 5 + current_face << " " << 4 + current_face << " "
-               << current_voxel -> r << " " << current_voxel -> g << " " << current_voxel -> b << " " << current_voxel -> a << std::endl
+               << current_voxel -> r << " " << current_voxel -> g << " " << current_voxel -> b << " " << current_voxel -> a/1.0 << std::endl
                << 4 << " " << 0 + current_face << " " << 4 + current_face << " " << 7 + current_face << " " << 3 + current_face << " "
-               << current_voxel -> r << " " << current_voxel -> g << " " << current_voxel -> b << " " << current_voxel -> a << std::endl
+               << current_voxel -> r << " " << current_voxel -> g << " " << current_voxel -> b << " " << current_voxel -> a/1.0 << std::endl
                << 4 << " " << 3 + current_face << " " << 7 + current_face << " " << 6 + current_face << " " << 2 + current_face << " "
-               << current_voxel -> r << " " << current_voxel -> g << " " << current_voxel -> b << " " << current_voxel -> a << std::endl
+               << current_voxel -> r << " " << current_voxel -> g << " " << current_voxel -> b << " " << current_voxel -> a/1.0 << std::endl
                << 4 << " " << 1 + current_face << " " << 2 + current_face << " " << 6 + current_face << " " << 5 + current_face<< " "
-               << current_voxel -> r << " " << current_voxel -> g << " " << current_voxel -> b << " " << current_voxel -> a << std::endl;
+               << current_voxel -> r << " " << current_voxel -> g << " " << current_voxel -> b << " " << current_voxel -> a/1.0 << std::endl;
           current_face += 8;
         }
       }

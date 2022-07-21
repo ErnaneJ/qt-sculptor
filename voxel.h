@@ -11,7 +11,7 @@ struct Voxel {
   float g; /**< Componente de cor G (Green) no formato RGBA em um intervalo de ponto flutuante de 0.0 à 1.0;*/
   float b; /**< Componente de cor B (Blue) no formato RGBA em um intervalo de ponto flutuante de 0.0 à 1.0;*/
   float a; /**< Componente de cor A (Alpha - Transparência) no formato RGBA em um intervalo de ponto flutuante de 0.0 à 1.0;*/
-  bool isOn; /**< Informação booleana que informará, a quem acessar o elemento, se ele deverá ser incluído ou não no modelo digital da escultura.*/
+  bool isOn = false; /**< Informação booleana que informará, a quem acessar o elemento, se ele deverá ser incluído ou não no modelo digital da escultura.*/
 };
 
 #endif // VOXEL

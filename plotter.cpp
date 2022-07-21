@@ -1,14 +1,16 @@
-#include "plotter.h"
+﻿#include "plotter.h"
 #include <QPainter>
 #include <QBrush>
 #include <QPen>
 #include <QMouseEvent>
 #include <QPointF>
-#include <QDebug>
 #include <QProcess>
 #include <QString>
+#include <QFileDialog>
 #include "QMessageBox"
-#include<cstring>
+#include <cstring>
+
+#include "interpreter.h"
 
 #include "sculptor.h"
 #include "putVoxel.h"
@@ -22,7 +24,7 @@
 #include "cutBox.h"
 
 Plotter::Plotter(QWidget *parent) : QWidget(parent){
-    sculptorDimensionX = sculptorDimensionY = sculptorDimensionZ = 10;
+    sculptorDimensionX = sculptorDimensionY = sculptorDimensionZ = 30;
     sculptor = new Sculptor(sculptorDimensionX, sculptorDimensionY, sculptorDimensionZ);
     method = dim = x = y = z = rad = r = ry = rx = rz = g = b = 0;
     a = 255;
@@ -33,39 +35,43 @@ void Plotter::paintEvent(QPaintEvent *event){
     QPainter pa(this);
     QPen pen;
     QBrush brush;
-    pen.setColor(QColor(0,0,0,70));
+
+    int dim1, dim2;
+
+    pen.setColor(QColor(0, 0, 0, 70));
     pen.setWidth(1);
-    pa.setPen(pen);
+
     brush.setColor(QColor(255,255,255,255));
     brush.setStyle(Qt::SolidPattern);
+
+    pa.setPen(pen);
     pa.setBrush(brush);
+
     p.clear();
     p = sculptor -> readMx(dim,plan);
-    int dim1 = width()/p[0].size();
-    int dim2 = height()/p.size();
-    (dim1 >= dim2) ? square=dim2 : square=dim1;
-    w = dim1;
-    h = dim2;
-    for(unsigned int i =0; i<p.size(); i++){
-       for(unsigned int j =0; j<p[0].size(); j++){
-            QRectF rectangle(i*square,j*square,square, square);
-            pa.drawRoundedRect(rectangle, 3.0, 3.0);
-        }
+
+    dim1 = width()/p[0].size();
+    dim2 = height()/p.size();
+    if(dim1 >= dim2){
+        square = dim2;
+    } else {
+        square = dim1;
     }
 
-    for(unsigned int i=0; i<p.size();i++){
-        for(unsigned int j=0; j<p[0].size();j++){
-            if(p[i][j].isOn){
-                brush.setColor(QColor(p[i][j].r,p[i][j].g,p[i][j].b,p[i][j].a));
-                brush.setStyle(Qt::SolidPattern);
-                pa.setBrush(brush);
-                QRectF rectangle(i*square,j*square,square, square);
-                pa.drawRoundedRect(rectangle, 3.0, 3.0);
-            }
+    for(unsigned int i = 0; i < p.size(); i++){
+        for(unsigned int j = 0; j < p[0].size(); j++){
+          QRectF rectangle(i*square, j*square, square, square);
+          brush.setStyle(Qt::SolidPattern);
+          if(p[i][j].isOn){
+            brush.setColor(QColor(p[i][j].r, p[i][j].g, p[i][j].b, p[i][j].a));
+          }else{
+            brush.setColor(QColor(255, 255, 255, 255));
+          }
+          pa.setBrush(brush);
+          pa.drawRoundedRect(rectangle, 3.0, 3.0);
        }
     }
 }
-
 
 void Plotter::mouseReleaseEvent(QMouseEvent *event){
     if(!(event->button() == Qt::LeftButton)){
@@ -101,6 +107,8 @@ void Plotter::changeRz(int radz) { rz=radz; }
 void Plotter::changeSlice(int pln) { dim = pln; repaint(); }
 
 void Plotter::shape(int method){
+    if(!(px < sculptorDimensionX && py < sculptorDimensionY && pz < sculptorDimensionZ)) return;
+
     float red = (float)(r/255.0);
     float green = (float)(g/255.0);
     float blue = (float)(b/255.0);
@@ -130,19 +138,33 @@ void Plotter::shape(int method){
           break;
         case CEllipsoid:
           (new CutEllipsoid(px, py, pz, rx, ry, rz)) -> draw(*sculptor);
-        break;
+          break;
     }
     repaint();
 }
 
-void Plotter::Off(QString file){
-    std::string txt = file.toStdString() + ".OFF";
-    this -> sculptor -> writeOFF(txt);
+void Plotter::Off(){
+    QString pathFile;
     QMessageBox box;
     QString msg;
-    msg = "Arquivo OFF criado com sucesso !";
-    box.setText(msg);
-    box.exec();
+
+    try {
+      pathFile = QFileDialog::getSaveFileName(this, tr("Save file OFF"), "../", tr("OFF Files (*.off)"));
+      if(pathFile != QString("")){
+          this -> sculptor -> writeOFF(pathFile.toStdString());
+          msg = "OFF file created successfully!";
+          box.setText(msg);
+          box.exec();
+      }else{
+          msg = "A path is required to save the OFF file.";
+          box.setText(msg);
+          box.exec();
+      }
+   } catch (const std::out_of_range& err) {
+      msg = "[Error] An error occurred while reading/writing the off file..";
+      box.setText(msg);
+      box.exec();
+   }
 }
 
 void Plotter::mouseEvents(QMouseEvent *event){
@@ -169,4 +191,26 @@ void Plotter::mouseEvents(QMouseEvent *event){
         break;
     }
     Plotter::shape(method);
+}
+
+void Plotter::clearAll(){
+    sculptor -> clearAll();
+    repaint();
+}
+
+void Plotter::openConseptualizationFile(QString path){
+    sculptor->~Sculptor();
+
+    Interpreter interpreter;
+
+    std::vector<FiguraGeometrica*> figures = interpreter.parse(path.toStdString());
+    sculptorDimensionX = interpreter.getDimX();
+    sculptorDimensionY = interpreter.getDimY();
+    sculptorDimensionZ = interpreter.getDimZ();
+    sculptor = new Sculptor(sculptorDimensionX, sculptorDimensionY, sculptorDimensionZ);
+    for(unsigned int i=0; i < figures.size(); i++){
+      figures[i] -> draw(*sculptor);
+    }
+
+    repaint();
 }

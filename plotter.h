@@ -135,6 +135,8 @@ public:
         int px, py, pz;
         ///Mouse is clicked = true.
         bool press;
+        ///Mouse is enter = true.
+        bool enter;
         ///Mouse coordinates.
         int mx, my;
     signals:
@@ -222,10 +224,14 @@ public:
         void changeSlice(int pln);
         /**
          * @brief Off é responsável por fazer a chamada da funcão writeOFF presente no Sculptor e atribuir um nome ao arquivo OFF;
-         * @param s é a string que armazena o nome escolhido para o arquivo pelo usuário;
          */
-        void Off(QString s);
+        void Off();
+        /**
+         * Apaga tudo que já foi desenhado
+         */
+        void clearAll();
 
+        void openConseptualizationFile(QString path);
 
 public slots:
 

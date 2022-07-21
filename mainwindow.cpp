@@ -1,10 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <cstdlib>
+#include <QFileDialog>
 #include "sculptor.h"
 #include "plotter.h"
 #include "QMessageBox"
 #include "QProcess"
+#include "QDesktopServices"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -123,17 +125,69 @@ void MainWindow::cShpere() { ui -> plotter -> method = CSphere; }
 void MainWindow::pEllip()  { ui -> plotter -> method = PEllipsoid; }
 void MainWindow::cEllip()  { ui -> plotter -> method = CEllipsoid; }
 
-void MainWindow::geomview() {
+void MainWindow::geomview() {   
+    QString pathFile;
+    QString msg;
+    QMessageBox box;
     QProcess process;
-    process.start("geomview", QStringList() << ui->lineEditOFF->text() +".OFF");
-    process.waitForFinished();
+    try {
+      pathFile = QFileDialog::getOpenFileName(this, tr("Open file OFF"), "../off_files/", tr("OFF Files (*.off)"));
+      if(pathFile != QString("")){
+          process.start("geomview", QStringList() << pathFile);
+          process.waitForFinished();
+      }else{
+          msg = "A path is required to save the OFF file.";
+          box.setText(msg);
+          box.exec();
+      }
+   } catch (const std::out_of_range& err) {
+      msg = "[Error] An error occurred while reading the off file.";
+      box.setText(msg);
+      box.exec();
+   }
 }
 
 void MainWindow::meshlab(){
+    QString pathFile;
+    QString msg;
+    QMessageBox box;
     QProcess process;
-    process.start("meshlab", QStringList() << ui->lineEditOFF->text() + ".OFF");
-    process.waitForFinished();
+    try {
+      pathFile = QFileDialog::getOpenFileName(this, tr("Open file OFF"), "../off_files/", tr("OFF Files (*.off)"));
+      if(pathFile != QString("")){
+          QDesktopServices::openUrl(QUrl(pathFile));
+      }else{
+          msg = "A path is required to save the OFF file.";
+          box.setText(msg);
+          box.exec();
+      }
+   } catch (const std::out_of_range& err) {
+      msg = "[Error] An error occurred while reading the off file.";
+      box.setText(msg);
+      box.exec();
+   }
 }
 
-void MainWindow::on_actionCriar_arquivo_OFF_triggered(){ ui->plotter->Off(ui->lineEditOFF->text()); }
-void MainWindow::on_actionQuit_triggered() { exit(0);}
+void MainWindow::on_actionCriar_arquivo_OFF_triggered(){ ui->plotter->Off(); }
+void MainWindow::on_actionQuit_triggered() { exit(0); }
+void MainWindow::on_actionClear_all_triggered() { ui->plotter->clearAll(); }
+void MainWindow::on_actionOpen_conceptualization_file_triggered() {
+    QString pathFile;
+    QString msg;
+    QMessageBox box;
+    try {
+      pathFile = QFileDialog::getOpenFileName(this, tr("Open conceptualization file"), "../off_files/", tr("Text Files (*.txt)"));
+      if(pathFile != QString("")){
+          ui -> plotter -> openConseptualizationFile(pathFile);
+      }else{
+          msg = "A path is required to open the conceptualization file.";
+          box.setText(msg);
+          box.exec();
+      }
+   } catch (const std::out_of_range& err) {
+      msg = "[Error] An error occurred while reading the conceptualization file.";
+      box.setText(msg);
+      box.exec();
+   }
+}
+
