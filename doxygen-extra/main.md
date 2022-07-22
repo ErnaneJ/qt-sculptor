@@ -64,7 +64,7 @@ Access the documentation for using the Sculptor class [here](https://ernanej.git
 
 After your amazing contribution is complete, open a `Pull Request` which I will review! 
 
-_* Correctly use the configuration files to run and/or develop. You will find the models here._
+_* Correctly use the configuration files to run and/or develop. You will find the models [here](https://github.com/ErnaneJ/qt-sculptor/tree/master/settings)._
 
 ---
 

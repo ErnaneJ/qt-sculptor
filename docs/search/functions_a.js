@@ -1,14 +1,12 @@
 var searchData=
 [
-  ['_7ecutbox_297',['~CutBox',['../classCutBox.html#a66d4f54307d42a20c7ad8aa860ede5bf',1,'CutBox']]],
-  ['_7ecutellipsoid_298',['~CutEllipsoid',['../classCutEllipsoid.html#a15c04713f9df8ba34d971fe946f728a5',1,'CutEllipsoid']]],
-  ['_7ecutsphere_299',['~CutSphere',['../classCutSphere.html#a9314c0e7e18f0e488cce4d4b2fbb8ae7',1,'CutSphere']]],
-  ['_7ecutvoxel_300',['~CutVoxel',['../classCutVoxel.html#a7f5eb61ed9b3410a59e55e7815989a0b',1,'CutVoxel']]],
-  ['_7egeometricfigure_301',['~GeometricFigure',['../classGeometricFigure.html#a86b390821ce231bc19cbe701ca430dd4',1,'GeometricFigure']]],
-  ['_7emainwindow_302',['~MainWindow',['../classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7',1,'MainWindow']]],
-  ['_7eputbox_303',['~PutBox',['../classPutBox.html#a030fced5c7acc62c9842e480c5729f2e',1,'PutBox']]],
-  ['_7eputellipsoid_304',['~PutEllipsoid',['../classPutEllipsoid.html#a2a82dd453d32a966218d3bea49406872',1,'PutEllipsoid']]],
-  ['_7eputsphere_305',['~PutSphere',['../classPutSphere.html#ab1c65114a718e71349497588ccb3e04b',1,'PutSphere']]],
-  ['_7eputvoxel_306',['~PutVoxel',['../classPutVoxel.html#ac3c14b19e69b462e3178b5dca92d7b34',1,'PutVoxel']]],
-  ['_7esculptor_307',['~Sculptor',['../classSculptor.html#a8f159bf97458326f16d2e238e11be7ff',1,'Sculptor']]]
+  ['sculptor_299',['Sculptor',['../classSculptor.html#a014e3ef5517bf0e9d9e14486b6ac6433',1,'Sculptor']]],
+  ['selectplane_300',['selectPlane',['../classMainWindow.html#aadb3177083dea6a54fdecf2a3b7338f7',1,'MainWindow']]],
+  ['set_301',['set',['../CMakeLists_8txt.html#a74d93e24feb8d1a00acc7977c1ee11e3',1,'CMakeLists.txt']]],
+  ['set_5fa_302',['set_a',['../classColorPicker.html#a8bc280604b3f18597a8254d752eb7224',1,'ColorPicker']]],
+  ['set_5fb_303',['set_b',['../classColorPicker.html#a292e4bc6b1fe8903992533f5d000b613',1,'ColorPicker']]],
+  ['set_5fg_304',['set_g',['../classColorPicker.html#a9a7cd5da9acf84b4ff1fc8480411380a',1,'ColorPicker']]],
+  ['set_5fr_305',['set_r',['../classColorPicker.html#a2a80aef868dde832281a497071782d15',1,'ColorPicker']]],
+  ['setcolor_306',['setColor',['../classSculptor.html#af1d69da01379874b0dfd6454787cb562',1,'Sculptor']]],
+  ['shape_307',['shape',['../classPlotter.html#a87f21d5d8de1a115fbf29de1611ec2b4',1,'Plotter']]]
 ];

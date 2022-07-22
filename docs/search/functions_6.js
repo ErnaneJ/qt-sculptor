@@ -1,15 +1,9 @@
 var searchData=
 [
-  ['paintevent_275',['paintEvent',['../classColorPicker.html#a6ff3bc8385028bd2d55a07b352a2a372',1,'ColorPicker::paintEvent()'],['../classPlotter.html#a06477bf987646f000a8982db1352a11d',1,'Plotter::paintEvent()']]],
-  ['parse_276',['parse',['../classInterpreter.html#a4c83097b29253f57b56e37e613d208ca',1,'Interpreter']]],
-  ['pbox_277',['pBox',['../classMainWindow.html#ae3e92c0ee24dca2a5a0032a158ed3b00',1,'MainWindow']]],
-  ['pellip_278',['pEllip',['../classMainWindow.html#a7ceec92c7b1e72f7a148c7a8dbe7bc13',1,'MainWindow']]],
-  ['planechosen_279',['planeChosen',['../classPlotter.html#a89299c59f57bfa91900af28e7009efe8',1,'Plotter']]],
-  ['plotter_280',['Plotter',['../classPlotter.html#a1807627530de30ae58dff3c42a823497',1,'Plotter']]],
-  ['pshpere_281',['pShpere',['../classMainWindow.html#a391ac8eb6e289e4b4170b9647e670727',1,'MainWindow']]],
-  ['putbox_282',['PutBox',['../classPutBox.html#ac385859f3ad19bcb41e4df0d2f2fc3c4',1,'PutBox']]],
-  ['putellipsoid_283',['PutEllipsoid',['../classPutEllipsoid.html#ab05636ac57a597df8fa6c40f76d172c4',1,'PutEllipsoid']]],
-  ['putsphere_284',['PutSphere',['../classPutSphere.html#a8f4f23204b79345fa756d0d096054571',1,'PutSphere']]],
-  ['putvoxel_285',['PutVoxel',['../classPutVoxel.html#adbdf6245fc1e359de830f511fbbba5a5',1,'PutVoxel::PutVoxel()'],['../classSculptor.html#a4bdea3048b419d58e93074060eaa7b52',1,'Sculptor::putVoxel()']]],
-  ['pvoxel_286',['pVoxel',['../classMainWindow.html#a2e14fe02f6bce7148691eeeff2ed2c99',1,'MainWindow']]]
+  ['off_279',['Off',['../classPlotter.html#ac7062872fbe70403f749023e728a8a48',1,'Plotter']]],
+  ['on_5factionclear_5fall_5ftriggered_280',['on_actionClear_all_triggered',['../classMainWindow.html#a730e3896f775d00503ea16fe0573549f',1,'MainWindow']]],
+  ['on_5factioncriar_5farquivo_5foff_5ftriggered_281',['on_actionCriar_arquivo_OFF_triggered',['../classMainWindow.html#adf96374a69158dcf2733905d37b10eb8',1,'MainWindow']]],
+  ['on_5factionopen_5fconceptualization_5ffile_5ftriggered_282',['on_actionOpen_conceptualization_file_triggered',['../classMainWindow.html#aec956b1f3af631cdd967650ab6c026b5',1,'MainWindow']]],
+  ['on_5factionquit_5ftriggered_283',['on_actionQuit_triggered',['../classMainWindow.html#aa68eba140c2cf5c1cd2b4bd81337fa83',1,'MainWindow']]],
+  ['openconseptualizationfile_284',['openConseptualizationFile',['../classPlotter.html#a3bb022504fda55bfe4aa4b96d1ddd3c7',1,'Plotter']]]
 ];

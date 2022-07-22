@@ -2,6 +2,7 @@ var files_dup =
 [
     [ "conceptualization_files", "dir_c7ac01594d16378a25435a1a8163ba86.html", null ],
     [ "doxygen-extra", "dir_08caeb465f6c75aa12dfe4c0d5cb9ac5.html", null ],
+    [ "settings", "dir_0c8fd76a6ec5a01c144012824d36fa80.html", null ],
     [ "ColorPicker.cpp", "ColorPicker_8cpp.html", null ],
     [ "ColorPicker.h", "ColorPicker_8h.html", [
       [ "ColorPicker", "classColorPicker.html", "classColorPicker" ]
