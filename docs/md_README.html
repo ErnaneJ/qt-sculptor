@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QtSculptor: Doxygen Awesome</title>
+<title>QtSculptor: README</title>
 <link rel="shortcut icon" href="/../../assets/bmoNbg.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -21,6 +21,7 @@
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
 <script type="text/javascript">
     DoxygenAwesomeDarkModeToggle.init()
@@ -92,75 +93,110 @@ $(document).ready(function(){initNavTree('md_README.html',''); initResizable(); 
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Doxygen Awesome </div>  </div>
+<div class="title">README </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a href="https://github.com/jothepro/doxygen-awesome-css/releases/latest"><img src="https://img.shields.io/github/v/release/jothepro/doxygen-awesome-css" alt="GitHub release (latest by date)" class="inline"/></a> <a href="https://github.com/jothepro/doxygen-awesome-css/blob/main/LICENSE"><img src="https://img.shields.io/github/license/jothepro/doxygen-awesome-css" alt="GitHub" class="inline"/></a> <img src="https://img.shields.io/github/stars/jothepro/doxygen-awesome-css" alt="GitHub Repo stars" class="inline"/></p>
-<div style="filter: drop-shadow(0px 3px 10px rgba(0,0,0,0.22)); max-width: 500px"></div><div style="filter: drop-shadow(0px 3px 10px rgba(0,0,0,0.22)); max-width: 500px"><img src="img/screenshot.png" alt="Screenshot of Doxygen Awesome CSS" class="inline"/></div><div style="filter: drop-shadow(0px 3px 10px rgba(0,0,0,0.22)); max-width: 500px"></div><p><b>Doxygen Awesome</b> is a custom <b>CSS theme for Doxygen HTML-documentation</b> with lots of customization parameters.</p>
-<h1><a class="anchor" id="autotoc_md24"></a>
-Motivation</h1>
-<p>I really like how the Doxygen HTML-documentation is structured! But IMHO it looks a bit outdated.</p>
-<p>This theme is an attemt to update the visuals of Doxygen without changing it's overall layout too much.</p>
-<h1><a class="anchor" id="autotoc_md25"></a>
-Features</h1>
+<div class="textblock"><h1 align="center">Qt - <a class="el" href="classSculptor.html" title="Sculptor class for manipulating elements, denoted voxels, in arrays three-dimensional digital.">Sculptor</a> </h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">BMO - Example Model </th><th class="markdownTableHeadCenter">Coin - Example Model  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><img src="https://raw.githubusercontent.com/ErnaneJ/sculptor/master/assets/bmo.gif" alt="BMO - example model" style="filter: none !important;" title="BMO - example model" align="right" width="100%" class="inline"/> </td><td class="markdownTableBodyCenter"><img src="https://raw.githubusercontent.com/ErnaneJ/sculptor/master/assets/coin.gif" alt="Coin - example model" style="filter: none !important;" title="Coin - example model" align="center" width="100%" class="inline"/>  </td></tr>
+</table>
+<p align="center"></p>
+<p><img src="https://raw.githubusercontent.com/ErnaneJ/qt-sculptor/master/assets/desktop-running.png?token=GHSAT0AAAAAABWI6KFB6CZRAJTBYXEYYIHYYW2E2SQ" alt="Desktop application print" style="filter: none !important;" title="Desktop application print" align="right" width="100%" class="inline"/> </p>
+<h2><a class="anchor" id="autotoc_md7"></a>
+💻 About</h2>
+<p>Desktop application in C++ to make sculptures in blocks represented by digital matrices. It allows the user to be able to create a plain text file that contains a sequence of steps to be followed to define properties of a three-dimensional matrix. The properties contain specifications for coordinates in the three-dimensional plane and color, with added transparency, for the elements. The built model can be visualized with the help of visualization software such as <a href="http://www.geomview.org/">GeomView</a> or <a href="https://www.meshlab.net/">Meshlab</a>.</p>
+<h2><a class="anchor" id="autotoc_md8"></a>
+📑 Docs</h2>
+<p>Access the documentation for using the <a class="el" href="classSculptor.html" title="Sculptor class for manipulating elements, denoted voxels, in arrays three-dimensional digital.">Sculptor</a> class <a href="https://ernanej.github.io/qt-sculptor/">here</a>.</p>
+<h2><a class="anchor" id="autotoc_md9"></a>
+📁 Features</h2>
 <ul>
-<li>🌈 Clean, modern design</li>
-<li>🚀 Heavily customizable by adjusting CSS-variables</li>
-<li>🧩 No changes to the HTML structure of Doxygen required</li>
-<li>📱 Improved mobile usability</li>
-<li>🌘 Dark mode support!</li>
-<li>🥇 Works best with <b>doxygen 1.9.1</b> - <b>1.9.3</b></li>
+<li>[x] Color manipulation in the RGBA model with real-time picker preview;</li>
+<li>[x] Different ways to design sculptures, among them;<ul>
+<li>[x] Application and removal of a single voxel;</li>
+<li>[x] Application and removal of a box, with dynamic dimensions, of voxels composed in space;</li>
+<li>[x] Application and removal of a sphere, with dynamic dimensions, of voxels composed in space;</li>
+<li>[x] Application and removal of an ellipse, with dynamic dimensions, of voxels composed in space;</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md26"></a>
-Examples</h1>
+</li>
+<li>[x] Selection of viewing planes:<ul>
+<li>[x] XY</li>
+<li>[X] YZ</li>
+<li>[x] XZ</li>
+</ul>
+</li>
+<li>[x] Shortcuts for opening the sculpture produced in flattened visualization systems for three-dimensional objects in off format:<ul>
+<li>[x] <a href="http://www.geomview.org/">GeomView</a>;</li>
+<li>[x] <a href="https://www.meshlab.net/">Meshlab</a></li>
+</ul>
+</li>
+<li>[x] Dynamic alteration of the sculpture's dimensions;</li>
+<li>[x] Sculpture conceptualization file loading. (its use is described in the section below);</li>
+<li>[x] Dynamic visualization on the plane by changing the depth axis;</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md10"></a>
+🗃️ Conceptualization files</h2>
 <ul>
-<li>Sidebar-Only theme: <a href="https://jothepro.github.io/doxygen-awesome-css/">Documentation of this repository</a></li>
-<li>Base theme: <a href="https://a4z.github.io/libsl3/">libsl3</a></li>
+<li>The system has a strong feature to read figures recorded in a file and draw them according to the present instructions. The file can contain the following instructions.</li>
+<li>The file will contain several of these lines, each one containing an instruction orienting the type of drawing to be carried out in the sequence. At the end, the program will read this file and create an output file in <code>OFF</code> format containing the design conceptualized in the provided file.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md27"></a>
-Installation</h1>
-<p>Copy the file <code>doxygen-awesome.css</code> from this repository into your project or add this repository as submodule and check out the latest release:</p>
-<div class="fragment"><div class="line">git submodule add https://github.com/jothepro/doxygen-awesome-css.git</div>
-<div class="line">cd doxygen-awesome-css</div>
-<div class="line">git checkout v2.0.3</div>
-</div><!-- fragment --><p>Choose one of the theme variants and configure Doxygen accordingly:</p>
-<p><span id="variants_image"></span></p>
-<p><span id="variants_image"><object type="image/svg+xml" data="img/theme-variants.drawio.svg" style="pointer-events: none;">Available theme variants</object></span></p>
-<p><span id="variants_image"></span></p>
-<ol type="1">
-<li><b>Base theme</b>: <div class="fragment"><div class="line"># Doxyfile</div>
-<div class="line">GENERATE_TREEVIEW      = YES # optional. Also works without treeview</div>
-<div class="line">HTML_EXTRA_STYLESHEET  = doxygen-awesome-css/doxygen-awesome.css</div>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Code </th><th class="markdownTableHeadLeft">What it does  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>dim largura altura profundidade</code> </td><td class="markdownTableBodyLeft">Defines the dimensions of the sculpture. <br  />
+<br  />
+ Ex.: <code>dim 60 40 55</code>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>putvoxel x y z r g b a</code> </td><td class="markdownTableBodyLeft">Draw a voxel at position (<code>x</code>,<code>y</code>,<code>z</code>) with color <code>r</code>,<code>g</code>,<code>b</code> and <code>a</code>. <br  />
+<br  />
+ Ex.: <code>putvoxel 5 5 10 1.0 0.8 0.4 0.3</code>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>cutvoxel x y z</code> </td><td class="markdownTableBodyLeft">Deletes a voxel at position (<code>x</code>,<code>y</code>,<code>z</code>) with color <code>r</code>,<code>g</code>,<code>b</code> and <code>a</code>. <br  />
+<br  />
+ Ex.: <code>cutvoxel 5 5 10</code>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>putbox xi xf yi yf zi zf r g b a</code> </td><td class="markdownTableBodyLeft">Draws a parallelepiped delimited by <code>x</code> belonging to (<code>xi</code>, <code>xf</code>), <code>y</code> belonging to (<code>yi</code>, <code>yf</code>) and <code>z</code> belonging to (<code>zi</code>, <code>z1</code>) with the color <code>r</code>, <code>g</code>, <code>b</code> and <code>a</code>. <br  />
+<br  />
+ Ex.: <code>putbox 10 15 12 33 1 8 0.4 0.5 0.8 1</code>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>cutbox xi xf yi yf zi zf</code> </td><td class="markdownTableBodyLeft">Deletes a parallelepiped delimited by <code>x</code> belonging to (<code>xi</code>, <code>xf</code>), <code>y</code> belonging to (<code>yi</code>, <code>yf</code>) and <code>z</code> belonging to (<code>zi</code>, <code>z1</code>). <br  />
+<br  />
+ Ex.: <code>cutbox 10 15 12 33 1 8</code>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>putsphere x_center y_center z_center radius r g b a</code> </td><td class="markdownTableBodyLeft">Draws a sphere with center at point (<code>x_center</code>, <code>y_center</code>, <code>z_center</code>), specified <code>radius</code> and color <code>r</code>, <code>g</code>, <code>b</code> and <code>a</code>.<br  />
+<br  />
+ Ex.: <code>putsphere 10 10 5 3 1.0 1.0 0.5 0.3</code>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>cutsphere x_center y_center z_center radius</code> </td><td class="markdownTableBodyLeft">Deletes a sphere with center at the specified point (<code>x_center</code>, <code>y_center</code>, <code>z_center</code>), <code>radius</code>. <br  />
+<br  />
+ Ex.: <code>cutsphere 10 10 5 3</code>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>putellipsoid x_center y_center z_center x_radius y_radius z_radius r g b a</code> </td><td class="markdownTableBodyLeft">Draws an ellipsoid with center at point (<code>x_center</code>, <code>y_center</code>, <code>z_center</code>), specified radii (<code>x_radius</code>, <code>y_radius</code>, <code>z_radius</code>) and color <code>r</code>,<code>g</code>,<code>b</code> and <code>a</code>.<br  />
+<br  />
+ Ex.: <code>putellipsoid 10 10 5 3 4 5 1.0 0.5 0.9 0.4</code>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>cutellipsoid x_center y_center z_center x_radius y_radius z_radius</code> </td><td class="markdownTableBodyLeft">Deletes an ellipsoid with center at point (<code>x_center</code>, <code>y_center</code>, <code>z_center</code>) and specified radius (<code>x_radius</code>, <code>y_radius</code>, <code>z_radius</code>).<br  />
+<br  />
+ Ex.: <code>cutellipsoid 10 10 5 3 4 5</code>  </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md11"></a>
+⚙️ Running and/or contribute</h2>
+<ul>
+<li>Fork this repository:</li>
+<li>Create a new branch: <div class="fragment"><div class="line">$ git branch -b &lt;branch_name&gt;</div>
 </div><!-- fragment --></li>
-<li><b>Sidebar-only theme</b>: <div class="fragment"><div class="line"># Doxyfile</div>
-<div class="line">GENERATE_TREEVIEW      = YES # required!</div>
-<div class="line">HTML_EXTRA_STYLESHEET  = doxygen-awesome-css/doxygen-awesome.css \</div>
-<div class="line">                         doxygen-awesome-css/doxygen-awesome-sidebar-only.css</div>
-</div><!-- fragment --></li>
-</ol>
-<p>Further installation instructions:</p>
-<ul>
-<li><a class="el" href="extensions_8md.html">How to install extensions</a></li>
-<li><a class="el" href="customization_8md.html">How to customize the theme (colors, spacing, border-radius, ...)</a></li>
-<li><a class="el" href="tricks_8md.html">Tips and Tricks for further configuration</a></li>
+<li>Run in development mode in qt Creator:</li>
+<li>Develop....... 🤯🚀</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md28"></a>
-Browser support</h1>
-<p>Tested with</p>
-<ul>
-<li>Chrome 98, Chrome 98 for Android, Chrome 87 for iOS</li>
-<li>Safari 15, Safari for iOS 15</li>
-<li>Firefox 97, Firefox Daylight 97 for Android, Firefox Daylight 96 for iOS</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md29"></a>
-Credits</h1>
-<ul>
-<li>This theme is inspired by the <a href="https://vuepress.vuejs.org/">vuepress</a> static site generator default theme.</li>
-<li>Thank you for all the feedback on github!</li>
-</ul>
-<p><span class="next_section_button"></span></p>
-<p><span class="next_section_button">Read Next: <a class="el" href="extensions_8md.html">Extensions</a> </span> </p>
-</div></div><!-- contents -->
+<p>After your amazing contribution is complete, open a <code>Pull Request</code> which I will review!</p>
+<hr  />
+<div align="center"> Developed with ❤ by <a href="https://links.ernane.dev/">Ernane Ferreira</a>. 👋🏻<br  />
+ Encouraged and idealized in semester 2022.1 by the teacher <a href="https://agostinhobritojr.github.io/">Agostinho Brito Junior</a>. <br  />
+ Federal University of Rio Grande do Norte - Department of Computer Engineering and Automation. </div> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

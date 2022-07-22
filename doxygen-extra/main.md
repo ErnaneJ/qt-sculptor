@@ -1,15 +1,37 @@
-# Sculptor
+# QtSculptor
 
 | BMO - Example Model | Coin - Example Model | 
 | :---: | :---: |
 | <img style="filter: none !important;" title="BMO - example model" align="right" alt="BMO - example model" src="https://raw.githubusercontent.com/ErnaneJ/sculptor/master/assets/bmo.gif" width="100%"> | <img style="filter: none !important;" title="Coin - example model" align="center" alt="Coin - example model" src="https://raw.githubusercontent.com/ErnaneJ/sculptor/master/assets/coin.gif" width="100%"> |
 
+<p align="center">
+  <img style="filter: none !important;" title="Desktop application print" align="right" alt="Desktop application print" src="https://raw.githubusercontent.com/ErnaneJ/qt-sculptor/master/assets/desktop-running.png?token=GHSAT0AAAAAABWI6KFB6CZRAJTBYXEYYIHYYW2E2SQ" width="100%"> 
+</p>
+
 ## About
 
-Tool in C++ to make sculptures in blocks represented by digital matrices. It allows the user to be able to create a plain text file that contains a sequence of steps to be followed to define properties of a three-dimensional matrix. The properties contain specifications for coordinates in the three-dimensional plane and color, with added transparency, for the elements. The built model can be visualized with the help of visualization software such as [GeomView](http://www.geomview.org/).
+Desktop application in C++ to make sculptures in blocks represented by digital matrices. It allows the user to be able to create a plain text file that contains a sequence of steps to be followed to define properties of a three-dimensional matrix. The properties contain specifications for coordinates in the three-dimensional plane and color, with added transparency, for the elements. The built model can be visualized with the help of visualization software such as [GeomView](http://www.geomview.org/) or [Meshlab](https://www.meshlab.net/).
 
-##  Docs
-Access the documentation for using the Sculptor class [here](https://ernanej.github.io/sculptor/).
+## Docs
+Access the documentation for using the Sculptor class [here](https://ernanej.github.io/qt-sculptor/).
+
+## Features
+- [x] Color manipulation in the RGBA model with real-time picker preview;
+- [x] Different ways to design sculptures, among them;
+  - [x] Application and removal of a single voxel;
+  - [x] Application and removal of a box, with dynamic dimensions, of voxels composed in space;
+  - [x] Application and removal of a sphere, with dynamic dimensions, of voxels composed in space;
+  - [x] Application and removal of an ellipse, with dynamic dimensions, of voxels composed in space;
+- [x] Selection of viewing planes:
+  - [x] XY
+  - [X] YZ
+  - [x] XZ
+- [x] Shortcuts for opening the sculpture produced in flattened visualization systems for three-dimensional objects in off format:
+  - [x] [GeomView](http://www.geomview.org/);
+  - [x] [Meshlab](https://www.meshlab.net/)
+- [x] Dynamic alteration of the sculpture's dimensions;
+- [x] Sculpture conceptualization file loading. (its use is described in the section below);
+- [x] Dynamic visualization on the plane by changing the depth axis;
 
 ## Conceptualization files
 
@@ -30,15 +52,17 @@ Access the documentation for using the Sculptor class [here](https://ernanej.git
 | `putellipsoid x_center y_center z_center x_radius y_radius z_radius r g b a` | Draws an ellipsoid with center at point (`x_center`, `y_center`, `z_center`), specified radii (`x_radius`, `y_radius`, `z_radius`) and color `r`,`g`,`b ` and `a`.<br/><br/> Ex.: `putellipsoid 10 10 5 3 4 5 1.0 0.5 0.9 0.4`
 | `cutellipsoid x_center y_center z_center x_radius y_radius z_radius` | Deletes an ellipsoid with center at point (`x_center`, `y_center`, `z_center`) and specified radius (`x_radius`, `y_radius`, `z_radius`).<br/><br/> Ex.: `cutellipsoid 10 10 5 3 4 5`|
 
-## Running
+## Running and/or contribute
 
-```bash
-  $ chmod +x ./run.sh && ./run.sh
+- Fork this repository:
+- Create a new branch:
+  ```bash
+  $ git branch -b <branch_name>
+  ```
+- Run in development mode in qt Creator:
+- Develop....... 🤯🚀
 
-  # to directly open the file in geomeview
-
-  $ chmod +x ./run.sh && ./run.sh --geomview bmo # necessary to have geomview previously installed
-```
+After your amazing contribution is complete, open a `Pull Request` which I will review! 
 
 ---
 

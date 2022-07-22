@@ -7,7 +7,7 @@
 | <img style="filter: none !important;" title="BMO - example model" align="right" alt="BMO - example model" src="https://raw.githubusercontent.com/ErnaneJ/sculptor/master/assets/bmo.gif" width="100%"> | <img style="filter: none !important;" title="Coin - example model" align="center" alt="Coin - example model" src="https://raw.githubusercontent.com/ErnaneJ/sculptor/master/assets/coin.gif" width="100%"> |
 
 <p align="center">
-  <img style="filter: none !important;" title="Desktop application print" align="right" alt="Desktop application print" src="assets/desktop-running.png" width="100%"> 
+  <img style="filter: none !important;" title="Desktop application print" align="right" alt="Desktop application print" src="https://raw.githubusercontent.com/ErnaneJ/qt-sculptor/master/assets/desktop-running.png?token=GHSAT0AAAAAABWI6KFB6CZRAJTBYXEYYIHYYW2E2SQ" width="100%"> 
 </p>
 
 ## 💻 About
@@ -18,22 +18,22 @@ Desktop application in C++ to make sculptures in blocks represented by digital m
 Access the documentation for using the Sculptor class [here](https://ernanej.github.io/qt-sculptor/).
 
 ## 📁 Features
-- [x]  Manipulação de cores no modelo RGBA com visualizaçção de seletor em tempo real; 
-- [x]  Diferentes formas para desenho de esculturas, dentre elas;
-  - [x]  Aplicação e remoção de um único voxel;   
-  - [x]  Aplicação e remoção de uma caixa, com dimenções dinamicas, de voxels composta no espaço;   
-  - [x]  Aplicação e remoção de uma esfera, com dimenções dinamicas, de voxels composta no espaço;    
-  - [x]  Aplicação e remoção de uma elipse, com dimenções dinamicas, de voxels composta no espaço; 
-- [x]  Seleção de planos de visualização:
-  - [x]  XY
-  - [x]  YZ
-  - [x]  XZ 
-- [x]  Atalhos para abertura da escultura produzida em sistemas de visualização planificada para objetos tridimencionais no formato off:
-  - [x]  [GeomView](http://www.geomview.org/);
-  - [x]  [Meshlab](https://www.meshlab.net/) 
-- [x]  Alteração dinamica das dimenções da escultura; 
-- [x]  Carregamento de arquivo de conceitualização de esculturas. (seu uso está descrito na seção abaixo); 
-- [x]  Visualização dinamica no plano por alteração no eixo de profundidade;
+- [x] Color manipulation in the RGBA model with real-time picker preview;
+- [x] Different ways to design sculptures, among them;
+  - [x] Application and removal of a single voxel;
+  - [x] Application and removal of a box, with dynamic dimensions, of voxels composed in space;
+  - [x] Application and removal of a sphere, with dynamic dimensions, of voxels composed in space;
+  - [x] Application and removal of an ellipse, with dynamic dimensions, of voxels composed in space;
+- [x] Selection of viewing planes:
+  - [x] XY
+  - [X] YZ
+  - [x] XZ
+- [x] Shortcuts for opening the sculpture produced in flattened visualization systems for three-dimensional objects in off format:
+  - [x] [GeomView](http://www.geomview.org/);
+  - [x] [Meshlab](https://www.meshlab.net/)
+- [x] Dynamic alteration of the sculpture's dimensions;
+- [x] Sculpture conceptualization file loading. (its use is described in the section below);
+- [x] Dynamic visualization on the plane by changing the depth axis;
 
 ## 🗃️ Conceptualization files
 

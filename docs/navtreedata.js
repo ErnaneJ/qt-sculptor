@@ -23,12 +23,12 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "QtSculptor", "index.html", [
-    [ "Sculptor", "index.html", [
-      [ "About", "index.html#autotoc_md1", null ],
-      [ "Docs", "index.html#autotoc_md2", null ],
-      [ "Conceptualization files", "index.html#autotoc_md3", null ],
-      [ "Running", "index.html#autotoc_md4", null ]
-    ] ],
+    [ "About", "index.html#autotoc_md1", null ],
+    [ "Docs", "index.html#autotoc_md2", null ],
+    [ "Features", "index.html#autotoc_md3", null ],
+    [ "Conceptualization files", "index.html#autotoc_md4", null ],
+    [ "Running and/or contribute", "index.html#autotoc_md5", null ],
+    [ "README", "md_README.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
     ] ],
