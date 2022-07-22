@@ -2,8 +2,8 @@
 #include "ui_mainwindow.h"
 #include <cstdlib>
 #include <QFileDialog>
-#include "sculptor.h"
-#include "plotter.h"
+#include "Sculptor.h"
+#include "Plotter.h"
 #include "QMessageBox"
 #include "QProcess"
 #include "QDesktopServices"
@@ -88,8 +88,7 @@ void MainWindow::changeYZ(){
 }
 
 void MainWindow::changeZX(){
-    ui -> plotter -> plan
-            = ZX;
+    ui -> plotter -> plan = ZX;
     emit ui -> plotter -> planeChosen(ZX);
     ui -> plotter -> dim = ui -> plotter -> sculptorDimensionY/2;
     ui -> horizontalSliderPlanoSpec -> setMaximum(ui -> plotter -> sculptorDimensionY -1);

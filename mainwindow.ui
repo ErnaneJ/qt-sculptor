@@ -877,7 +877,7 @@
   <customwidget>
    <class>Plotter</class>
    <extends>QWidget</extends>
-   <header>plotter.h</header>
+   <header>Plotter.h</header>
    <container>1</container>
    <slots>
     <slot>set_r(int)</slot>
@@ -886,7 +886,7 @@
   <customwidget>
    <class>ColorPicker</class>
    <extends>QWidget</extends>
-   <header location="global">colorpicker.h</header>
+   <header location="global">ColorPicker.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

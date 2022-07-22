@@ -3,68 +3,146 @@
 
 #include <QMainWindow>
 #include "vector"
-#include "sculptor.h"
-#include "plotter.h"
+#include "Sculptor.h"
+#include "Plotter.h"
 
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
-/**
- * @brief A classe MainWindow é responsável por realizar várias funções relativas a mudanças de variáveis pelo usuário por meio da interface;
+
+//! Class MainWindow
+/*!
+ * @brief The MainWindow class is responsible for performing various functions related to changes in variables by the user through the interface;
  */
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
+    //! MainWindow class constructor.
+    /*!
+    * Acts as default constructor;
+    **/
     MainWindow(QWidget *parent = nullptr);
+
+    //! Destructor of the MainWindow class.
+    /*!
+    * Acts as the default destructor;
+    **/
     ~MainWindow();
 public slots:
-    ///Realiza várias ações ao redimensionar o sculptor;
+    //! Public slot selectPlane 
+    /*!
+    * Performs various actions when resizing the sculptor;
+    **/
     void selectPlane();
-    /// manipula elementos  que necessitam da cor vermelha;
+    //! Public slot changeRed 
+    /*!
+    * manipulates elements that need the color red;
+    **/
     void changeRed(int);
-    /// manipula elementos  que necessitam da cor azul;
+    //! Public slot changeBlue 
+    /*!
+    * manipulates elements that need the blue color;
+    **/
     void changeBlue(int);
-    /// manipula elementos  que necessitam da cor verde;
+    //! Public slot changeGreen 
+    /*!
+    * manipulates elements that need the color green;
+    **/
     void changeGreen(int);
-    // manipula elementos  que necessitam do alpha;
+    //! Public slot changeAlpha 
+    /*!
+    * apply transparency
+    **/
     void changeAlpha(int);
-    ///Ativa o plano XY como plano visível;
+    //! Public slot changeXY 
+    /*!
+    * Ativa o plano XY como plano visível;
+    **/
     void changeXY();
-    ///Ativa o plano XZ como plano visível;
+    //! Public slot changeYZ 
+    /*!
+    * Activate the XZ plane as a visible plane;
+    **/
     void changeYZ();
-    ///Ativa o plano ZX como plano visível;
+    //! Public slot changeZX 
+    /*!
+    * Activates the ZX plane as a visible plane;
+    **/
     void changeZX();
-    ///Ativa a função PutVoxel. Chamado quando o botão é pressionado;
+    //! Public slot pVoxel 
+    /*!
+    * Enables the construction of voxels with the PutVoxel model.
+    **/
     void pVoxel();
-    ///Ativa a função CutVoxel. Chamado quando o botão é pressionado;
+    //! Public slot cVoxel 
+    /*!
+    * Enables the construction of voxels with the CutVoxel model.
+    **/
     void cVoxel();
-    ///Ativa a função PutBox. Chamado quando o botão é pressionado;
+    //! Public slot pBox 
+    /*!
+    * Enables the construction of voxels with the PutBox model.
+    **/
     void pBox();
-    ///Ativa a função CutBox. Chamado quando o botão é pressionado;
+    //! Public slot cBox 
+    /*!
+    * Enables the construction of voxels with the CutBox model.
+    **/
     void cBox();
-    ///Ativa a função PutSphere. Chamado quando o botão é pressionado;
+    //! Public slot pShpere 
+    /*!
+    * Enables the construction of voxels with the PutSphere model.
+    **/
     void pShpere();
-    ///Ativa a função CutSphere. Chamado quando o botão é pressionado;
+    //! Public slot cShpere 
+    /*!
+    * Enables the construction of voxels with the CutSphere model.
+    **/
     void cShpere();
-    ///Ativa a função PutEllipsoid. Chamado quando o botão é pressionado;
+    //! Public slot pEllip 
+    /*!
+    * Enables the construction of voxels with the PutEllipsoid model.
+    **/
     void pEllip();
-    ///Ativa a função CutEllipsoid. Chamado quando o botão é pressionado;
+    //! Public slot cEllip 
+    /*!
+    * Enables the construction of voxels with the CutEllipsoid model.
+    **/
     void cEllip();
-    ///Abre o arquivo gravado com o geomview quando o botão é pressionado;
+    //! Public slot geomview 
+    /*!
+    * It allows, after saving the OFF file generated in the application, selecting it and opening it in the GeomeView viewer.
+    **/
     void geomview();
-    ///Abre o arquivo gravado com o geomview quando o botão é pressionado;
+    //! Public slot meshlab 
+    /*!
+    * It allows, after saving the OFF file generated in the application, selecting it and opening it in the MeshLab viewer.
+    **/
     void meshlab();
 
 private slots:
-    /// Finaliza o programa;
+    //! Private slot on_actionQuit_triggered 
+    /*!
+    * Close application;
+    **/
     void on_actionQuit_triggered();
-    /// Cria o arquivo OFF quando o botão é engatilhado;
+    //! Private slot on_actionCriar_arquivo_OFF_triggered 
+    /*!
+    * Requests path to generate the off file from the created sculpture.
+    **/
     void on_actionCriar_arquivo_OFF_triggered();
-    /// Limpa tudo já desenhado
+    //! Private slot on_actionClear_all_triggered 
+    /*!
+    * Clean everything already drawn
+    **/
     void on_actionClear_all_triggered();
+    //! Private slot on_actionClear_all_triggered 
+    /*!
+    * Interpret conceptualization files and show in the flattened views widget
+    **/
     void on_actionOpen_conceptualization_file_triggered();
 
 private:
